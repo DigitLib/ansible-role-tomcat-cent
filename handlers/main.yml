@@ -1,7 +1,7 @@
 ---
-- name: tomcat restart
+- name: tomcat8 restart
   service: name={{ tomcat_service_name }} state=restarted
   sudo: True
-
+  listen: "restart tomcat8"
 #- name: restart iptables
 #  service: name=iptables state=restarted

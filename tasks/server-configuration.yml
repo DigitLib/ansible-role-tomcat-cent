@@ -2,12 +2,12 @@
 
 - name: tomcat  | server configuration
   template: src=server.xml.j2 dest="{{ tomcat_conf_dir }}/server.xml"
-  notify: tomcat restart
+  notify: restart tomcat8
   sudo: True
 
 - name: tomcat  | users configuration
   template: src=tomcat-users.xml.j2 dest="{{ tomcat_conf_dir }}/tomcat-users.xml"
-  notify: tomcat restart
+  notify: restart tomcat8
   sudo: True
 
 - name: tomcat  | start

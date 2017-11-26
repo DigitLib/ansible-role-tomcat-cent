@@ -14,7 +14,7 @@ tomcat_target_dir:  apache-tomcat-8.0.47
 tomcat_symlink:  tomcat8
 
 # Tomcat configuration files related
-tomcat_conf_dir:  "{{ tomcat_dest }}{{ tomcat_symlink }}/conf/"
+tomcat_conf_dir:  "{{ tomcat_dest }}{{ tomcat_target_dir }}/conf/"
 
 # Tomcat server.xml
 # nothing for now

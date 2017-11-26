@@ -10,7 +10,7 @@
     command: chdir=/usr/share /bin/tar xvf "{{ tomcat_dest }}{{ tomcat_binary }}" -C /opt/ creates="{{ tomcat_dest }}{{ tomcat_target_dir }}"
 
   - name: tomcat  | symlink install directory
-    file: src="{{ tomcat_dest }}{{ tomcat_target_dir }}" path="{{ tomcat_dest }}{{ tomcat_symlink }}" state=link
+    file: src="{{ tomcat_dest }}{{ tomcat_target_dir }}" path="/var/lib/{{ tomcat_symlink }}" state=link
     #file: src=/opt/apache-tomcat-8.0.23 path=/opt/tomcat-latest state=link
     sudo: True
 
